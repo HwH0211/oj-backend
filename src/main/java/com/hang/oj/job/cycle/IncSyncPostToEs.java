@@ -2,7 +2,7 @@ package com.hang.oj.job.cycle;
 
 import com.hang.oj.esdao.PostEsDao;
 import com.hang.oj.mapper.PostMapper;
-import com.hang.oj.model.dto.post.PostEsDTO;
+import com.hang.oj.model.entity.dto.post.PostEsDTO;
 import com.hang.oj.model.entity.Post;
 import java.util.Date;
 import java.util.List;

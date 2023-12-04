@@ -1,6 +1,5 @@
 package com.hang.oj.controller;
 
-import co.elastic.clients.elasticsearch.sql.QueryRequest;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.google.gson.Gson;
 import com.hang.oj.annotation.AuthCheck;
@@ -11,8 +10,7 @@ import com.hang.oj.common.ResultUtils;
 import com.hang.oj.constant.UserConstant;
 import com.hang.oj.exception.BusinessException;
 import com.hang.oj.exception.ThrowUtils;
-import com.hang.oj.model.dto.question.*;
-import com.hang.oj.model.dto.user.UserQueryRequest;
+import com.hang.oj.model.entity.dto.question.*;
 import com.hang.oj.model.entity.Question;
 import com.hang.oj.model.entity.User;
 import com.hang.oj.model.vo.QuestionVO;
@@ -145,6 +143,29 @@ public class QuestionController {
 
     /**
      * 根据 id 获取
+     *
+     * @param id
+     * @return
+     */
+    @GetMapping("/get")
+    public BaseResponse<Question> getQuestionById(long id, HttpServletRequest request) {
+        if (id <= 0) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
+        }
+        Question question = questionService.getById(id);
+        if (question == null) {
+            throw new BusinessException(ErrorCode.NOT_FOUND_ERROR);
+        }
+        User loginUser = userService.getLoginUser(request);
+        //不是本人或者管理员，不能获取到全部数据W
+        if (!question.getUserId().equals(loginUser.getId()) && userService.isAdmin(loginUser)){
+            throw new BusinessException(ErrorCode.NO_AUTH_ERROR);
+        }
+        return ResultUtils.success(question);
+    }
+
+    /**
+     * 根据 id 获取（脱敏）
      *
      * @param id
      * @return

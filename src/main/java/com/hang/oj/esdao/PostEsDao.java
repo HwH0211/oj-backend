@@ -1,6 +1,6 @@
 package com.hang.oj.esdao;
 
-import com.hang.oj.model.dto.post.PostEsDTO;
+import com.hang.oj.model.entity.dto.post.PostEsDTO;
 import java.util.List;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 

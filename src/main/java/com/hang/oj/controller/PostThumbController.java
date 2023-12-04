@@ -4,7 +4,7 @@ import com.hang.oj.common.BaseResponse;
 import com.hang.oj.common.ErrorCode;
 import com.hang.oj.common.ResultUtils;
 import com.hang.oj.exception.BusinessException;
-import com.hang.oj.model.dto.postthumb.PostThumbAddRequest;
+import com.hang.oj.model.entity.dto.postthumb.PostThumbAddRequest;
 import com.hang.oj.model.entity.User;
 import com.hang.oj.service.PostThumbService;
 import com.hang.oj.service.UserService;

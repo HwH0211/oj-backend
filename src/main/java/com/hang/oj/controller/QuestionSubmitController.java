@@ -1,16 +1,12 @@
 package com.hang.oj.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.hang.oj.annotation.AuthCheck;
 import com.hang.oj.common.BaseResponse;
 import com.hang.oj.common.ErrorCode;
 import com.hang.oj.common.ResultUtils;
-import com.hang.oj.constant.UserConstant;
 import com.hang.oj.exception.BusinessException;
-import com.hang.oj.model.dto.question.QuestionQueryRequest;
-import com.hang.oj.model.dto.questionsubmit.QuestionSubmitAddRequest;
-import com.hang.oj.model.dto.questionsubmit.QuestionSubmitQueryRequest;
-import com.hang.oj.model.entity.Question;
+import com.hang.oj.model.entity.dto.questionsubmit.QuestionSubmitAddRequest;
+import com.hang.oj.model.entity.dto.questionsubmit.QuestionSubmitQueryRequest;
 import com.hang.oj.model.entity.QuestionSubmit;
 import com.hang.oj.model.entity.User;
 import com.hang.oj.model.vo.QuestionSubmitVO;
@@ -59,6 +55,7 @@ public class QuestionSubmitController {
         long questionSubmitId = questionSubmitService.doQuestionSubmit(questionSubmitAddRequest, loginUser);
         return ResultUtils.success(questionSubmitId);
     }
+
 
     /**
      * 分页获取题目提交列表（除管理员外，普通用户只能看到非答案，提交代码等公开信息）

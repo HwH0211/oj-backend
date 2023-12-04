@@ -1,7 +1,7 @@
 package com.hang.oj.service;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.hang.oj.model.dto.post.PostQueryRequest;
+import com.hang.oj.model.entity.dto.post.PostQueryRequest;
 import com.hang.oj.model.entity.Post;
 import javax.annotation.Resource;
 import org.junit.jupiter.api.Assertions;

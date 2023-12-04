@@ -1,6 +1,5 @@
 package com.hang.oj.service.impl;
 import java.util.List;
-import java.util.Date;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -9,7 +8,7 @@ import com.hang.oj.common.ErrorCode;
 import com.hang.oj.constant.CommonConstant;
 import com.hang.oj.exception.BusinessException;
 import com.hang.oj.exception.ThrowUtils;
-import com.hang.oj.model.dto.question.QuestionQueryRequest;
+import com.hang.oj.model.entity.dto.question.QuestionQueryRequest;
 import com.hang.oj.model.entity.*;
 import com.hang.oj.model.vo.QuestionVO;
 import com.hang.oj.model.vo.UserVO;

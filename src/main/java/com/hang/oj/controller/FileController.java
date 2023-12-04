@@ -7,7 +7,7 @@ import com.hang.oj.common.ResultUtils;
 import com.hang.oj.constant.FileConstant;
 import com.hang.oj.exception.BusinessException;
 import com.hang.oj.manager.CosManager;
-import com.hang.oj.model.dto.file.UploadFileRequest;
+import com.hang.oj.model.entity.dto.file.UploadFileRequest;
 import com.hang.oj.model.entity.User;
 import com.hang.oj.model.enums.FileUploadBizEnum;
 import com.hang.oj.service.UserService;

@@ -9,7 +9,7 @@ import com.hang.oj.common.ErrorCode;
 import com.hang.oj.constant.CommonConstant;
 import com.hang.oj.exception.BusinessException;
 import com.hang.oj.mapper.UserMapper;
-import com.hang.oj.model.dto.user.UserQueryRequest;
+import com.hang.oj.model.entity.dto.user.UserQueryRequest;
 import com.hang.oj.model.entity.User;
 import com.hang.oj.model.enums.UserRoleEnum;
 import com.hang.oj.model.vo.LoginUserVO;

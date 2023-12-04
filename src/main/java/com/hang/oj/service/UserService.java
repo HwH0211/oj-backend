@@ -2,7 +2,7 @@ package com.hang.oj.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.hang.oj.model.dto.user.UserQueryRequest;
+import com.hang.oj.model.entity.dto.user.UserQueryRequest;
 import com.hang.oj.model.entity.User;
 import com.hang.oj.model.vo.LoginUserVO;
 import com.hang.oj.model.vo.UserVO;

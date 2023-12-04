@@ -3,7 +3,7 @@ package com.hang.oj.service;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.hang.oj.model.dto.post.PostQueryRequest;
+import com.hang.oj.model.entity.dto.post.PostQueryRequest;
 import com.hang.oj.model.entity.Post;
 import com.hang.oj.model.vo.PostVO;
 import javax.servlet.http.HttpServletRequest;

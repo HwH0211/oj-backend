@@ -1,8 +1,7 @@
 package com.hang.oj.model.vo;
 
-
 import cn.hutool.json.JSONUtil;
-import com.hang.oj.model.dto.questionsubmit.JudgeInfo;
+import com.hang.oj.model.entity.dto.questionsubmit.JudgeInfo;
 import com.hang.oj.model.entity.QuestionSubmit;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
@@ -11,7 +10,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 题目封装类
+ * 题目提交封装类
  * @TableName question
  */
 @Data
@@ -70,6 +69,7 @@ public class QuestionSubmitVO implements Serializable {
      * 对应题目信息
      */
     private QuestionVO questionVO;
+
     /**
      * 包装类转对象
      *
@@ -102,8 +102,9 @@ public class QuestionSubmitVO implements Serializable {
         QuestionSubmitVO questionSubmitVO = new QuestionSubmitVO();
         BeanUtils.copyProperties(questionSubmit, questionSubmitVO);
         String judgeInfoStr = questionSubmit.getJudgeInfo();
-        questionSubmitVO.setJudgeInfo(JSONUtil.toBean(judgeInfoStr,JudgeInfo.class));
+        questionSubmitVO.setJudgeInfo(JSONUtil.toBean(judgeInfoStr, JudgeInfo.class));
         return questionSubmitVO;
     }
+
     private static final long serialVersionUID = 1L;
 }

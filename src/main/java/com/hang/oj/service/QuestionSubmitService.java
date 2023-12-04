@@ -2,14 +2,12 @@ package com.hang.oj.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.hang.oj.model.dto.questionsubmit.QuestionSubmitAddRequest;
-import com.hang.oj.model.dto.questionsubmit.QuestionSubmitQueryRequest;
+import com.hang.oj.model.entity.dto.questionsubmit.QuestionSubmitAddRequest;
+import com.hang.oj.model.entity.dto.questionsubmit.QuestionSubmitQueryRequest;
 import com.hang.oj.model.entity.QuestionSubmit;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.hang.oj.model.entity.User;
 import com.hang.oj.model.vo.QuestionSubmitVO;
-
-import javax.servlet.http.HttpServletRequest;
 
 /**
 * @author Rain

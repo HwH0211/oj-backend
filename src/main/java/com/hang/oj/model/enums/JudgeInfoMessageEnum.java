@@ -1,7 +1,5 @@
 package com.hang.oj.model.enums;
 
-import com.sun.jna.Memory;
-import com.sun.org.apache.xalan.internal.xsltc.cmdline.Compile;
 import org.apache.commons.lang3.ObjectUtils;
 
 import java.util.Arrays;
@@ -11,21 +9,22 @@ import java.util.stream.Collectors;
 /**
  * 判题信息消息枚举
  *
+ * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
+ * @from <a href="https://yupi.icu">编程导航知识星球</a>
  */
 public enum JudgeInfoMessageEnum {
 
-    Accepted("Accepted", "成功"),
-    Wrong_Answer("Wrong Answer", "答案错误"),
-    Compile_Error("Compile Error", "编译错误"),
-    Memory_Limit_Exceeded("Memory Limit Exceeded", "内存溢出"),
-    Time_Limit_Exceeded("Time Limit Exceeded", "超时"),
-    Presentation_Error("Presentation Error", "展示错误"),
-    Output_Limit_Exceeded("Output Limit Exceeded", "输出溢出"),
-    Waiting("Waiting", "等待中"),
-    Dangerous_Operation("Dangerous Operation", "危险操作"),
-    Runtime_Error("Runtime Error", "运行错误"),
-    System_Error("System Error", "系统错误");
-
+    ACCEPTED("成功", "Accepted"),
+    WRONG_ANSWER("答案错误", "Wrong Answer"),
+    COMPILE_ERROR("Compile Error", "编译错误"),
+    MEMORY_LIMIT_EXCEEDED("", "内存溢出"),
+    TIME_LIMIT_EXCEEDED("Time Limit Exceeded", "超时"),
+    PRESENTATION_ERROR("Presentation Error", "展示错误"),
+    WAITING("Waiting", "等待中"),
+    OUTPUT_LIMIT_EXCEEDED("Output Limit Exceeded", "输出溢出"),
+    DANGEROUS_OPERATION("Dangerous Operation", "危险操作"),
+    RUNTIME_ERROR("Runtime Error", "运行错误"),
+    SYSTEM_ERROR("System Error", "系统错误");
 
     private final String text;
 

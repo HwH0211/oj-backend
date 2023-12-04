@@ -1,9 +1,7 @@
 package com.hang.oj.model.vo;
 
-
 import cn.hutool.json.JSONUtil;
-import com.google.gson.reflect.TypeToken;
-import com.hang.oj.model.dto.question.JudgeConfig;
+import com.hang.oj.model.entity.dto.question.JudgeConfig;
 import com.hang.oj.model.entity.Question;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
@@ -34,7 +32,7 @@ public class QuestionVO implements Serializable {
     private String content;
 
     /**
-     * 标签列表（json 数组）
+     * 标签列表
      */
     private List<String> tags;
 
@@ -77,10 +75,12 @@ public class QuestionVO implements Serializable {
      * 更新时间
      */
     private Date updateTime;
+
     /**
      * 创建题目人的信息
      */
     private UserVO userVO;
+
     /**
      * 包装类转对象
      *
@@ -98,7 +98,7 @@ public class QuestionVO implements Serializable {
             question.setTags(JSONUtil.toJsonStr(tagList));
         }
         JudgeConfig voJudgeConfig = questionVO.getJudgeConfig();
-        if (voJudgeConfig != null){
+        if (voJudgeConfig != null) {
             question.setJudgeConfig(JSONUtil.toJsonStr(voJudgeConfig));
         }
         return question;
@@ -116,11 +116,12 @@ public class QuestionVO implements Serializable {
         }
         QuestionVO questionVO = new QuestionVO();
         BeanUtils.copyProperties(question, questionVO);
-        List<String> tagList = JSONUtil.toList(question.getTags(),String.class);
+        List<String> tagList = JSONUtil.toList(question.getTags(), String.class);
         questionVO.setTags(tagList);
         String judgeConfigStr = question.getJudgeConfig();
-        questionVO.setJudgeConfig(JSONUtil.toBean(judgeConfigStr,JudgeConfig.class));
+        questionVO.setJudgeConfig(JSONUtil.toBean(judgeConfigStr, JudgeConfig.class));
         return questionVO;
     }
+
     private static final long serialVersionUID = 1L;
 }

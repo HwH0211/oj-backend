@@ -2,8 +2,7 @@ package com.hang.oj.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.hang.oj.model.dto.question.QuestionQueryRequest;
-import com.hang.oj.model.entity.Question;
+import com.hang.oj.model.entity.dto.question.QuestionQueryRequest;
 import com.hang.oj.model.entity.Question;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.hang.oj.model.vo.QuestionVO;

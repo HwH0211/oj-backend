@@ -1,7 +1,7 @@
 package com.hang.oj.job.once;
 
 import com.hang.oj.esdao.PostEsDao;
-import com.hang.oj.model.dto.post.PostEsDTO;
+import com.hang.oj.model.entity.dto.post.PostEsDTO;
 import com.hang.oj.model.entity.Post;
 import com.hang.oj.service.PostService;
 import java.util.List;
